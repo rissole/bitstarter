@@ -88,7 +88,8 @@ if(require.main == module) {
         })
     }
     doChecks(file, program.checks);
-    fs.unlinkSync('tmp.html')
+    if (fs.existsSync('tmp.html')
+        fs.unlinkSync('tmp.html')
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
